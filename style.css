@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background: #ffffff;
+    width: 280px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+h2 {
+    margin: 10px 0 5px;
+}
+
+.role {
+    color: gray;
+    font-size: 14px;
+}
+
+.about {
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+.skills span {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    margin: 3px;
+}
+
+a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #333;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
