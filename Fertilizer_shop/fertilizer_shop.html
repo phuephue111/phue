@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fertilizer Shop</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    /* Header */
+    header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    /* Container */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    /* Card styles */
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 30px;
+      
+      flex: 1 ;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-body h3 {
+      margin: 0 0 10px 0;
+      font-size: 1.2rem;
+    }
+
+    .card-body p {
+      flex: 1;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .price {
+      font-size: 1.1rem;
+      color: #e91e63;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      transition: background-color 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #333;
+      color: white;
+      margin-top: 30px;
+    }
+
+    /* Responsive text */
+    @media (max-width: 500px) {
+      .card-body h3 {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>🌱 Fertilizer Shop</h1>
+  </header>
+
+  <!-- Fertilizer Grid -->
+  <div class="container" id="fertilizer-list">
+    <!-- Cards will be added here by JavaScript -->
+  </div>
+
+  <!-- Footer 
+  <footer>
+    &copy; 2025 Fertilizer Shop. All rights reserved.
+  </footer>
+  -->
+
+  <!-- JavaScript -->
+  <script>
+    // Sample fertilizer data
+    const fertilizers = [
+      { name: "Organic Compost", desc: "Improves soil structure and fertility.", price: 65000, img: "images/organic_compost.jfif" },
+      { name: "Urea Fertilizer", desc: "High nitrogen content for plant growth.", price: 75500, img: "images/images.jfif" },
+      { name: "Potash Fertilizer", desc: "Boosts root strength and crop yield.", price: 58500, img: "images/download.jfif" },
+      { name: "NPK Fertilizer", desc: "Balanced nutrients for all crops.", price: 73000, img: "images/npk.jfif" },
+      { name: "Bio Fertilizer", desc: "Eco-friendly and natural.", price: 68500, img: "images/bio.jfif"  },
+      { name: "Vermicompost", desc: "Nutrient-rich organic compost.", price: 70000, img: "images/vermi.jfif"},
+      { name: "Zinc Fertilizer", desc: "Nutrient and accumulation.", price: 80500, img: "images/zinc.jfif"  },
+      { name: "Compost + NPK 15:15:15", desc: "Nitrogen, phosphorus, and potassium.", price: 74000, img: "images/npk15.jfif"}
+    ];
+
+    const container = document.getElementById("fertilizer-list");
+
+    fertilizers.forEach(f => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <img src="${f.img}" alt="${f.name}">
+        <div class="card-body">
+          <h3>${f.name}</h3>
+          <p>${f.desc}</p>
+          <div class="price">${f.price.toFixed(2)}</div>
+          <button class="btn">Add to Cart</button>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  </script>
+
+</body>
+</html>
