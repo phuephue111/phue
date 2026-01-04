@@ -1,60 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: #f0f2f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-   
+    background: #f9fafb;
+    color: #1f2937;
+    line-height: 1.7;
 }
 
-.card {
-    background: #ffffff;
-    width: 280px;
-    padding: 20px;
-    border-radius: 12px;
+/* ===== Hero Section ===== */
+.hero {
     text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #111827, #1f2937);
+    color: white;
 }
 
-.avatar {
-    width: 120px;
-    height: 120px;
+.profile-img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
     border-radius: 50%;
+    border: 4px solid #38bdf8;
+    margin-bottom: 20px;
 }
 
-h2 {
-    margin: 10px 0 5px;
+.hero h1 {
+    font-size: 2.5rem;
 }
 
-.role {
-    color: gray;
-    font-size: 14px;
+.hero h3 {
+    font-weight: 400;
+    margin-top: 5px;
+    color: #c7d2fe;
 }
 
-.about {
-    font-size: 14px;
-    margin: 15px 0;
+.hero-text {
+    max-width: 600px;
+    margin: 20px auto;
+    color: #e5e7eb;
+}
+
+.hero-links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    border: 2px solid #38bdf8;
+}
+
+.hero-links a:hover {
+    background: #38bdf8;
+    color: #111827;
+}
+
+/* ===== Sections ===== */
+.section {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-left: 5px solid #38bdf8;
+    padding-left: 15px;
+}
+
+.bg-light {
+    background: #f1f5f9;
+}
+
+/* ===== Skills ===== */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 .skills span {
-    display: inline-block;
-    background: #333;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 12px;
-    margin: 3px;
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
 }
 
-a {
-    display: inline-block;
-    margin-top: 15px;
+/* ===== Projects ===== */
+.project-card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+}
+
+.project-card a {
     text-decoration: none;
-    color: #333;
-    border: 1px solid #333;
-    padding: 8px 15px;
-    border-radius: 20px;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #111827;
+    color: #e5e7eb;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
 }
 
 
